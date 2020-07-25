@@ -39,7 +39,9 @@
 
   {% include 'social-meta-tags' %}
 
-  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  {{ 'sass/app.sass' | asset_url | stylesheet_tag }}
 
   <script>
     var theme = {

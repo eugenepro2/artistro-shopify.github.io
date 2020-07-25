@@ -1,4 +1,4 @@
-{% if section.settings.message %}
+{% comment %} {% if section.settings.message %}
   <style>
     {% if section.settings.logo != blank %}
       .site-header__logo-image {
@@ -14,8 +14,8 @@
   </style>
 {% endif %}
 
-{% include 'search-drawer' %}
-
+{% include 'search-drawer' %} {% endcomment %}
+{% comment %} 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>
   {% if section.settings.message %}
     {% if section.settings.home_page_only == false or request.page_type == 'index' %}
@@ -63,10 +63,6 @@
       {% endif %}
 
       <div class="grid__item {{ logo_classes }}">
-        {% comment %}
-          Use the uploaded logo from theme settings if enabled.
-          Site name gets precedence with H1 tag on homepage, div on other pages.
-        {% endcomment %}
         {% if request.page_type == 'index' %}
           <h1 class="h2 site-header__logo">
         {% else %}
@@ -105,7 +101,6 @@
       {% if section.settings.align_logo == 'left' %}
         <nav class="grid__item medium-up--one-half small--hide" id="AccessibleNav" role="navigation">
           {% include 'site-nav', linklist: section.settings.main_linklist %}
-          1111
         </nav>
       {% endif %}
 
@@ -252,8 +247,98 @@
     {% include 'site-nav', linklist: section.settings.main_linklist, wrapper_class: 'site-nav--centered' %}
   </nav>
   {% endif %}
-</div>
+</div> {% endcomment %}
 
+
+<header>
+  <div class="py-2 px-4 sm:px-2 top bg-black">
+    <div class="container">
+      <div class="flex items-center text-white"><a class="sm:mr-20 mr-4 text-sm font-normal" href="#">Designed in USA</a><a class="sm:mr-20 flex items-center mr-4 text-sm font-normal" href="#"><svg class="icon icon-shipping mr-2 fill-current">
+            <use xlink:href="img/sprite.svg#icon-shipping"></use>
+          </svg>Free shipping</a><a class="flex items-center text-sm font-normal" href="#"><svg class="icon icon-guarantee mr-2 fill-current">
+            <use xlink:href="img/sprite.svg#icon-guarantee"></use>
+          </svg>365 day satisfaction guarantee</a></div>
+    </div>
+  </div>
+  <div class="middle bg-white p-4">
+    <div class="container">
+      <div class="justify-center flex flex-wrap items-center">
+        <div class="w-full sm:w-6/12">
+          <ul class="justify-around sm:justify-between flex">
+            <li><a class="text-base font-normal" href="#">Shipping</a></li>
+            <li><a class="text-base font-normal" href="#">FAQ</a></li>
+            <li><a class="text-base font-normal" href="#">Contact Us</a></li>
+            <li><a class="text-base font-normal" href="#">info@artistro.com</a></li>
+          </ul>
+        </div>
+        <div class="w-4/12">
+          <ul class="flex justify-end">
+            <li class="pl-6"><a href="#"><svg class="icon icon-fb ">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg></a></li>
+            <li class="pl-6"><a href="#"><svg class="icon icon-insta ">
+                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                </svg></a></li>
+            <li class="pl-6"><a href="#"><svg class="icon icon-twitter ">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg></a></li>
+            <li class="pl-6"><a href="#"><svg class="icon icon-pinterest ">
+                  <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+                </svg></a></li>
+            <li class="pl-6"><a href="#"><svg class="icon icon-youtube ">
+                  <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                </svg></a></li>
+            <li class="pl-6"><a href="#"><svg class="icon icon-tiktok ">
+                  <use xlink:href="img/sprite.svg#icon-tiktok"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="w-2/12 flex items-center justify-end"><a class="mr-4" href="#">Login</a><svg class="icon icon-login ">
+            <use xlink:href="img/sprite.svg#icon-login"></use>
+          </svg></div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom bg-lightPink pt-2">
+    <div class="container">
+      <div class="px-4 pb-2 sm:px-0 flex items-center">
+        <div class="w-2/12 flex items-center justify-between">
+          <div class="logo"><a href="#"><img class="object-contain" src="../img/images/logo.png" alt=""></a></div>
+        </div>
+        <div class="w-8/12 flex">
+          <nav class="hidden lg:block w-full pl-14">
+            <ul class="flex items-center justify-around">
+              <li class="pl-12"><a class="xl:text-xl text-base uppercase font-normal" href="#">Catalog</a></li>
+              <li class="pl-12"><a class="xl:text-xl text-base uppercase font-normal" href="#">Tutorials</a></li>
+              <li class="pl-12"><a class="xl:text-xl text-base uppercase font-normal" href="#">Insparation</a></li>
+              <li class="pl-12"><a class="xl:text-xl text-base uppercase font-normal" href="#">Reviews</a></li>
+              <li class="pl-12"><a class="xl:text-xl text-base uppercase font-normal" href="#">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="w-2/12">
+          <div class="actions flex justify-end w-full"><a class="text-3xl" href="#"><svg class="icon icon-search fill-current">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg></a><span class="border border-solid border-lightGray mx-8"> </span><a class="text-3xl" href="#"><svg class="icon icon-cart fill-current">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg></a></div>
+        </div>
+        <div class="lg:hidden cursor-pointer ml-8 menu relative"><span class="block bg-black my-1"></span><span class="block bg-black my-1"></span><span class="block bg-black my-1"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-1/2 sm:w-1/4 menu-popup fixed h-full z-2 h-screen bg-white top-0 left-0 invisible">
+    <nav>
+      <ul class="flex flex-col mt-16">
+        <li class="pl-8 m-4"><a class="text-xl uppercase font-normal" href="#">Catalog</a></li>
+        <li class="pl-8 m-4"><a class="text-xl uppercase font-normal" href="#">Tutorials</a></li>
+        <li class="pl-8 m-4"><a class="text-xl uppercase font-normal" href="#">Insparation</a></li>
+        <li class="pl-8 m-4"><a class="text-xl uppercase font-normal" href="#">Reviews</a></li>
+        <li class="pl-8 m-4"><a class="text-xl uppercase font-normal" href="#">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 
 <script type="application/ld+json">

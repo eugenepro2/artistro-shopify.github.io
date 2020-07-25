@@ -137,7 +137,7 @@
   {%- endif -%}
 {%- endcapture -%}
 
-<footer class="site-footer" role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
+{% comment %} <footer class="site-footer" role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
   <div class="page-width">
     <div class="site-footer__content">
       {%- for block in section.blocks -%}
@@ -343,8 +343,71 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> {% endcomment %}
 
+
+<footer class="bg-black py-6 relative z-1">
+  <div class="container">
+    <div class="px-5 sm:px-0 flex flex-wrap">
+      <div class="w-full xs:w-1/2 md:w-1/4"><a class="footer__logo" href="#"><img class="object-contain" src="../img/footer/logo-footer.png" alt=""></a>
+        <ul class="flex justify-start py-6">
+          <li class="pr-6"><a href="#"><svg class="icon icon-fb ">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg></a></li>
+          <li class="pr-6"><a href="#"><svg class="icon icon-insta ">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg></a></li>
+          <li class="pr-6"><a href="#"><svg class="icon icon-twitter ">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg></a></li>
+          <li class="pr-6"><a href="#"><svg class="icon icon-pinterest ">
+                <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+              </svg></a></li>
+          <li class="pr-6"><a href="#"><svg class="icon icon-youtube ">
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
+              </svg></a></li>
+          <li class="pr-6"><a href="#"><svg class="icon icon-tiktok ">
+                <use xlink:href="img/sprite.svg#icon-tiktok"></use>
+              </svg></a></li>
+        </ul>
+        <div class="copyright text-white text-sm opacity-75 font-light not-italic pb-6">
+          <p class="pb-6">© 2020 Artistro. All rights reserved.</p>
+          <div class="copyright__link"><a class="pr-5 underline" href="#">Terms of Service</a><a class="pr-5 underline" href="#">Privacy policy</a></div>
+        </div>
+      </div>
+      <div class="w-full xs:w-1/2 md:w-1/4 sm:pl-5">
+        <h3>Help</h3>
+        <ul class="footer__list">
+          <li> <a class="underline" href="#">info@artistro.com</a></li>
+          <li> <span>9906 67 Road</span></li>
+          <li> <span>Forest Hills, NY 11375 </span></li>
+        </ul>
+      </div>
+      <div class="w-full xs:w-1/2 md:w-1/4">
+        <h3>Info</h3>
+        <ul class="footer__list">
+          <li> <a href="#">Search</a></li>
+          <li> <a href="#">Privacy Policy</a></li>
+          <li> <a href="#">Refund Policy</a></li>
+          <li> <a href="#">Terms of Service</a></li>
+          <li> <a href="#">Shipping &amp; Delivery</a></li>
+        </ul>
+      </div>
+      <div class="w-full xs:w-1/2 md:w-1/4">
+        <h3>Let's Keep In Touch</h3>
+        <ul class="footer__list">
+          <li> <span>Subscribe to receive special offers,<br /> giveaways, and exclusive deals.</span></li>
+          <form class="w-full max-w-sm" action="post">
+            <div class="flex items-center">
+              <div class="w-7/12"><input class="text-sm" type="text" placeholder="Email"></div>
+              <div class="w-5/12"><button>Sign Up</button></div>
+            </div>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 {% schema %}
