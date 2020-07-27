@@ -401,11 +401,12 @@
             </svg></span><span class="button-prev p-4 duration-700 ease-in-out cursor-pointer"><svg class="icon icon-arrow-right fill-current">
             <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
             </svg></span></div>
+        {% for product in collections.all.products %}
         <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="flex justify-center">
             <div class="product__item bg-white delay-150">
-                <div class="product__img cursor-pointer"><img src="{{'popular_products.png' | asset_img_url: 'master'}}" alt=""></div>
+                <div class="product__img cursor-pointer"><img src="{{ product | img_url:'medium' }}" alt=""></div>
                 <div class="relative p-4">
                 <div class="
             product__reviews
@@ -434,246 +435,10 @@
                 underline
                 " href="#">266 rewievs</a>
                 </div>
-                <h3 class="text-black py-5 text-xl font-semibold">Trending Collars</h3>
-                <p class="text-dull text-base py-2">15 Amazing colors, Sturdy tips, Smooth application</p>
+                <h3 class="text-black py-5 text-xl font-semibold">{{ product.title }}</h3>
+                <p class="text-dull text-base py-2"></p>
                 <div class="product_price">
-                    <sapn class="new text-black text-xl font-bold mr-6">$19,95</sapn><span class="old line-through font-light text-xl text-dull">$25,95</span>
-                </div>
-                <div class="
-            product_btn
-            py-6
-            duration-700 ease-in-out
-            w-full
-            bg-white
-            absolute
-            flex justify-center
-            opacity-1
-            md:opacity-0"><a class="
-                btn-white
-                flex items-center justify-center
-                bg-white
-                text-black text-sm
-                w-full
-                uppercase font-bold
-                duration-700 ease-in-out
-                cursor-pointer" href="#">Add to cart</a></div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="flex justify-center">
-            <div class="product__item bg-white delay-150">
-                <div class="product__img cursor-pointer"><img src="{{'popular_products.png' | asset_img_url: 'master'}}" alt=""></div>
-                <div class="relative p-4">
-                <div class="
-            product__reviews
-            flex justify-start items-center
-            ">
-                    <ul class="flex justify-start">
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    </ul><a class="
-                text-sm text-dull
-                font-normal
-                pl-3
-                underline
-                " href="#">266 rewievs</a>
-                </div>
-                <h3 class="text-black py-5 text-xl font-semibold">Trending Collars</h3>
-                <p class="text-dull text-base py-2">15 Amazing colors, Sturdy tips, Smooth application</p>
-                <div class="product_price">
-                    <sapn class="new text-black text-xl font-bold mr-6">$19,95</sapn><span class="old line-through font-light text-xl text-dull">$25,95</span>
-                </div>
-                <div class="
-            product_btn
-            py-6
-            duration-700 ease-in-out
-            w-full
-            bg-white
-            absolute
-            flex justify-center
-            opacity-1
-            md:opacity-0"><a class="
-                btn-white
-                flex items-center justify-center
-                bg-white
-                text-black text-sm
-                w-full
-                uppercase font-bold
-                duration-700 ease-in-out
-                cursor-pointer" href="#">Add to cart</a></div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="flex justify-center">
-            <div class="product__item bg-white delay-150">
-                <div class="product__img cursor-pointer"><img src="{{'popular_products.png' | asset_img_url: 'master'}}" alt=""></div>
-                <div class="relative p-4">
-                <div class="
-            product__reviews
-            flex justify-start items-center
-            ">
-                    <ul class="flex justify-start">
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    </ul><a class="
-                text-sm text-dull
-                font-normal
-                pl-3
-                underline
-                " href="#">266 rewievs</a>
-                </div>
-                <h3 class="text-black py-5 text-xl font-semibold">Trending Collars</h3>
-                <p class="text-dull text-base py-2">15 Amazing colors, Sturdy tips, Smooth application</p>
-                <div class="product_price">
-                    <sapn class="new text-black text-xl font-bold mr-6">$19,95</sapn><span class="old line-through font-light text-xl text-dull">$25,95</span>
-                </div>
-                <div class="
-            product_btn
-            py-6
-            duration-700 ease-in-out
-            w-full
-            bg-white
-            absolute
-            flex justify-center
-            opacity-1
-            md:opacity-0"><a class="
-                btn-white
-                flex items-center justify-center
-                bg-white
-                text-black text-sm
-                w-full
-                uppercase font-bold
-                duration-700 ease-in-out
-                cursor-pointer" href="#">Add to cart</a></div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="flex justify-center">
-            <div class="product__item bg-white delay-150">
-                <div class="product__img cursor-pointer"><img src="{{'popular_products.png' | asset_img_url: 'master'}}" alt=""></div>
-                <div class="relative p-4">
-                <div class="
-            product__reviews
-            flex justify-start items-center
-            ">
-                    <ul class="flex justify-start">
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    </ul><a class="
-                text-sm text-dull
-                font-normal
-                pl-3
-                underline
-                " href="#">266 rewievs</a>
-                </div>
-                <h3 class="text-black py-5 text-xl font-semibold">Trending Collars</h3>
-                <p class="text-dull text-base py-2">15 Amazing colors, Sturdy tips, Smooth application</p>
-                <div class="product_price">
-                    <sapn class="new text-black text-xl font-bold mr-6">$19,95</sapn><span class="old line-through font-light text-xl text-dull">$25,95</span>
-                </div>
-                <div class="
-            product_btn
-            py-6
-            duration-700 ease-in-out
-            w-full
-            bg-white
-            absolute
-            flex justify-center
-            opacity-1
-            md:opacity-0"><a class="
-                btn-white
-                flex items-center justify-center
-                bg-white
-                text-black text-sm
-                w-full
-                uppercase font-bold
-                duration-700 ease-in-out
-                cursor-pointer" href="#">Add to cart</a></div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="flex justify-center">
-            <div class="product__item bg-white delay-150">
-                <div class="product__img cursor-pointer"><img src="{{'popular_products.png' | asset_img_url: 'master'}}" alt=""></div>
-                <div class="relative p-4">
-                <div class="
-            product__reviews
-            flex justify-start items-center
-            ">
-                    <ul class="flex justify-start">
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    <li><span><svg class="icon icon-star fill-current text-yellowIcon">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg></span></li>
-                    </ul><a class="
-                text-sm text-dull
-                font-normal
-                pl-3
-                underline
-                " href="#">266 rewievs</a>
-                </div>
-                <h3 class="text-black py-5 text-xl font-semibold">Trending Collars</h3>
-                <p class="text-dull text-base py-2">15 Amazing colors, Sturdy tips, Smooth application</p>
-                <div class="product_price">
-                    <sapn class="new text-black text-xl font-bold mr-6">$19,95</sapn><span class="old line-through font-light text-xl text-dull">$25,95</span>
+                    <span class="new text-black text-xl font-bold mr-6">{{ product.price | money_without_currency }}</span><span class="old line-through font-light text-xl text-dull">{{ product.price_max | money_without_currency}}</span>
                 </div>
                 <div class="
             product_btn
@@ -698,9 +463,12 @@
             </div>
         </div>
         </div>
+        {% endfor %}
     </div>
     </div>
 </section>
+
+
 <section class="test bg-wight pb-16 relative">
     <div class="lg:block hidden test__decor absolute bg-contain bg-no-repeat left-0 z-0" style="background-image: url({{'decor-test.svg' | asset_url}})"></div>
     <div class="container relative z-1">
